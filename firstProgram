@@ -1,0 +1,352 @@
+//console.log("Hello World!");
+/*let userName1 = 'Sam \'Walter\'';
+console.log(userName1);
+let userName2 = 'Sam\tWalter';
+console.log(userName2, typeof userName2);
+
+let num1 = Number(3);
+console.log(num1, typeof num1);
+
+let text = Boolean(num1);
+console.log(text, typeof text, 'Sample');
+
+let num2 = Number('7 Sample');
+console.log(num2, typeof num2);
+
+console.log(Math.pow(4,3));
+console.log(4**3);
+
+//*******Ternary opearator***********
+let check = num1>4?'good':'bad'; 
+    check = num1>4?'high': num1<1?'low':(num1=10);
+console.log(check, num1); */
+
+//******Template Literal e.g.************
+/*
+let num1 = 2, num2 = 3, result = num1 +num2;
+console.log('First, the addition of '+ num1 + ' and ' + num2 + ' is ' +result);
+console.log(`Again, the addition of ${num1} and ${num2} is ${result}`);  // ` is the back-tick symbol 
+*/
+//***DRY --> don't repeat yourself 
+
+//******Convert into Integer******** -->
+/*
+let num = 123.99;
+console.log('Float Num is: '+num);
+console.log('Num is: '+parseInt(num));
+console.log(num);
+//console.log(parseFloat(num));
+*/
+//***************Reverse a number*************-->
+/*
+var res = [], num = 856423;
+while(num>0){
+res.push(num%10);
+num = parseInt(num/10);
+}
+res = (res.toString()).replace(/,/g, '');  //res.toString()  --> converts an array into a string in CSV format
+console.log(res);
+*/
+
+//*********************Object*****************-->
+/*
+var inputFromUser = 'name',
+data ={
+    name: 'Kevin',
+    place: 'England',
+    occupation: 'Cricketer',
+    designation: myDesignation('Kevin')
+};
+
+function myDesignation(name) {
+if(name == 'Kevin'){
+    return 'Batter';
+}
+}
+console.log('Using dot operator:  '+data.name);
+console.log('Without using dot operator:  '+data[inputFromUser]);
+console.log('Using a Function Call:  '+data.designation);
+*/
+
+//***************Nested Object*******************--->
+/*
+var inputFromUser = 'name',
+data ={
+    name: 'Kevin',
+    place: 'England',
+    occupation: 'Cricketer',
+    laptop: {
+        brand: 'Dell',
+        processor: 'I3',
+        model: 'Inspiron 15 3000 Series',
+        storage: '500 GB HDD'
+    }
+  };
+console.log(data);
+console.log(data.laptop);
+console.log(data.laptop.brand.length);
+console.log(data.laptop?.brand);
+console.log(data?.occupation);
+delete data.occupation;
+console.log(data?.occupation);
+
+var str = '   SampleText   ';
+console.log(str);
+str = str.trim();
+console.log(str);
+*/
+//**************"For In" loop********* -->
+/*
+var key,  data ={
+    name: 'Kevin',
+    place: 'England',
+    occupation: 'Cricketer',
+    laptop: {
+        brand: 'Dell',
+        processor: 'I3',
+        model: 'Inspiron 15 3000 Series',
+        storage: '500 GB HDD'
+    }
+  };
+
+for(key in data){
+    console.log(key, ":", data[key]);     
+}
+for(key in data.laptop){
+    console.log(key, ":", data.laptop[key]); 
+}
+
+//
+var text = 'Alpha';
+console.log(Testing());
+function Testing(sampleText){
+    return "Returned Value is: "+sampleText;
+}
+*/
+//**********Function as Expression******--->
+/*var result, 
+add = function(num1, num2){    //observed in Script Include
+ return num1 + num2;
+};
+
+//In Script Include, functions are defined as follows -->
+<Script-Include-name>.<function-name> = function(parm1, parm2,......){
+ //...........
+};  
+
+result = add(7,4);
+console.log(result); 
+
+result = addition(12,12);
+console.log(result);
+function addition(num1, num2=5){  //Expression "num2 = 5" makes the default value of num2 as "5". 
+                                  //This value can be overriden during a function-call.
+    return num1 + num2;
+}
+*/
+
+//**************Replacement of 'function' keyword --> Arrow '=>' keyword  ------>
+/*
+var expression = () => {
+    return 'Alpha Bravo';
+};
+console.log(expression());
+
+var addNumbers = (num1, num2) => {
+    return num1 + num2;
+};
+console.log('Sum is',addNumbers(7,4));
+
+//If the function if of a single line, then curly-braces can be reduced as follows -->
+var addNumbers = (num1,num2) => num1 + num2;
+console.log('Sum is',addNumbers(7,4));
+*/
+//-------------------------------------------------------//
+//*this* keyword -->  it refers to the current-object */
+/*
+var laptop= {
+    brand: 'Dell',
+    processor: 'I3',
+    model: 'Inspiron 15 3000 Series',
+    storage: '500 GB HDD',
+    getLaptopData: function(){
+        return(this.brand+'  '+this.processor);  //*this* means the  current-object,i.e. "laptop"
+    }
+};
+console.log(laptop.getLaptopData()); 
+*/
+//---------------------------------------
+//"Constructor" -->
+/*
+function laptop(brand, processor){
+    this.brand = brand;
+    this.processor = processor;
+    this.work = function(){
+        console.log('Data is: '+this.brand+'  ---  '+this.processor);
+    }
+}
+
+let obj1 = new laptop('HP', 'I5'),
+    obj2 = new laptop('Dell', 'I7');
+obj1.work();
+obj2.work();
+*/
+//-------------------------------------------
+// Push & Pop operations in an Array -->
+/*
+var data = new Array;  // Constructor of Array
+//or  var data = [];
+data.push('Dell');
+data.push('HP');
+console.log(data);
+data.pop();
+console.log(data);
+*/
+//------------------------------------------//
+//Function as an element of an Array -->
+/*
+let data = ['Element-0','Element-1',function(){ console.log('Element-2 as a Function');}];
+console.log(data);
+data[2]();
+*/
+//----------------------------------------------//
+//Methods of an Array -->
+//Push, Pop, Shift
+/*
+let data = [5,6,7,8,9,10,11];
+data.push(12);  // adds the element to the last of an array
+data.pop(); //removes the last element of an array & returns the removed element, in this case -> '9'.
+//console.log(data.shift()); //removes the 1st element of an array, i.e. at index[0] 
+//console.log(data);
+data.unshift(5); //adds the 1st element of an array, i.e. at index[0]
+console.log(data);
+data.splice(2,3); //means remove 3 elements starting from index[2], i.e. index[2], index[3] & index[4]
+console.log(data);
+data.splice(2); //cut the array from 2nd index.
+console.log(data);
+*/
+//---------------------------------------------//
+
+//Printing all the elements of an Array -->
+/*
+let arry = [11,22,33,44],
+    data, index;
+    /*
+//"for of" loop,  which takes 1 data at a time   
+for (data of arry) {
+    console.log(data);
+} 
+
+//"for in" loop, which takes 1 index at a time -->
+for (index in arry) {
+    if (Object.hasOwnProperty.call(arry, index)) {
+        data = arry[index];
+        console.log(`Index-Values: ${index} & data-value: ${data}`);    
+    }
+}
+*/
+//----------------------------------------------//
+
+//Array Destructuring -->
+/*
+let arry = [1,2,3,4];
+//[a,b,c,d] = arry;
+//console.log('Values are --> '+a+' '+b+' '+c+' '+d);
+[a,,c,d]= arry;
+console.log('Values are --> '+a+' '+' '+c+' '+d);
+*/
+//--------------------------------------------//
+//Swap values via Array Destructuring -->
+/*
+let a= 4, b=5;
+[a,b] = [b,a];
+console.log('Swapped Values are: \na->'+a+' b->'+b);
+*/
+//--------------------------------------------//
+
+//forEach method in Arrays ->
+/*
+let arr = [11,22,33];
+arr.forEach((dataValue, dataIndex) => { //arrow function
+    console.log(dataValue+' '+dataIndex);
+});  */
+//------------------------------------------//
+
+//'Filter' method in an Array ->
+/*
+var arr = [11,22,33,44,55,66];
+//filter all the even values
+console.log(arr.filter(dataValue => dataValue%2==0)); //prints the array with only Even values
+arr.filter(dataValue => dataValue%2==0).forEach(dataValue => {  //arrow function
+            console.log(`Next: ${dataValue}`);   
+});
+*/
+//--------------------------------------------//
+
+//'Map' method in an Array ->   used to modify the values of array, and hence use such values.
+/*
+var arr = [1,2,3,4];
+arr.map(dataValue => dataValue*2).forEach(dataValue => {   //forEach method is used to print the values.
+ console.log(dataValue);
+});
+*/
+//--------------------------------------------//
+
+//'Reduce' method in an Array ->  used to perform any action on all the values of an Array
+/*
+var arr = [1,2,3,4],
+result = arr.reduce((firstData, secondData) => firstData + secondData);
+console.log(`Result is: ${result}`);  //All the elements of array have been added.
+//--------------------------------------------//
+
+*/
+//--------------------------------------------//
+
+//Using Map & Reduce together ->
+/*
+var arr = [1,2,3,4],
+result = arr.map(dataValue => dataValue*2).reduce((firstValue, secondValue) => firstValue + secondValue);
+console.log(`Result is: ${result}`);
+// Using filter + map + reduce ->
+var arr = [1,2,3,4,5,6],
+result = arr.filter(dataValue => dataValue%2==0).map(dataValue => dataValue*2).reduce((firstValue, secondValue) => firstValue + secondValue);
+console.log(`Result is: ${result}`);
+*/
+//--------------------------------------------//
+
+//'Set' class --> used to store data, with no index values. Only unique values are allowed.
+/*
+var data = new Set(); //'data' is a constructor of Set class.
+data.add(1),data.add(2),data.add(1),data.add(2),data.add('First'),data.add('JS'),data.add('Program'),data.add('Program');
+data.forEach(dataValue =>{
+  console.log(`Values are: ${dataValue}`);  //Repeated values are not allowed in a Set.
+});
+*/
+//--------------------------------------------//
+
+//'Map' -> used to set Key-Value pairs
+/*
+var content = new Map();
+content.set('0','Alpha');
+content.set('1','Bravo');
+content.set('2','Charlie');
+content.forEach((data,index)=>{
+    console.log(`Index ${index} has ${data}`);
+});
+*/
+//--------------------------------------------//
+
+//Recursion  --> repeating itself. This will be explained below by finding the factorial of a number.
+
+var num = 3;
+function fact(num){
+ if(num>=1)
+   return (num*fact(num-1));  //Called the function 'fact()' inside the same function, means FoF call, which 
+ else                         //is a loop. This is called Recursion.
+     return 1;  
+}
+
+console.log(`Factorial of ${num} is`, fact(num)); 
+
+//--------------------------------------------//
+
