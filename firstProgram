@@ -337,7 +337,7 @@ content.forEach((data,index)=>{
 //--------------------------------------------//
 
 //Recursion  --> repeating itself. This will be explained below by finding the factorial of a number.
-
+/*
 var num = 3;
 function fact(num){
  if(num>=1)
@@ -347,6 +347,6 @@ function fact(num){
 }
 
 console.log(`Factorial of ${num} is`, fact(num)); 
-
+*/
 //--------------------------------------------//
 
